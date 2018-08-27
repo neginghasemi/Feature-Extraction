@@ -111,7 +111,7 @@ def chi_square(word, category):
 
 if __name__ == '__main__':
 
-    with open('/Users/negin/Downloads/SNLP/HW1/HAM2-corpus-short-with-tag-selected.txt', 'r') as fileCollection:
+    with open('./dataset/corpus.txt', 'r') as fileCollection:
         collection = fileCollection.read().split('\n')
         fileCollection.close()
     document_number = len(collection)-1
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     score_information_gain = list(zip(words, score_information_gain))
     score_information_gain = sorted(score_information_gain, key=lambda l1: l1[1], reverse=True)
     column_title = "W, Score Of Algorithm\n"
-    Result_Information_Gain = codecs.open("/Users/negin/Desktop/Result_Information_Gain.csv", "wb", "utf-8")
+    Result_Information_Gain = codecs.open("./Results/Result_Information_Gain.csv", "wb", "utf-8")
     Result_Information_Gain.write(column_title)
     for w in range(0, 100):
         line = str(score_information_gain[w][0])
@@ -180,7 +180,7 @@ if __name__ == '__main__':
     score_mutual_information = list(zip(words, score_mutual_information))
     score_mutual_information = sorted(score_mutual_information, key=lambda l2: l2[1], reverse=True)
     column_title = "W, Score Of Algorithm, Main Domain, Score Of The Main Domain\n"
-    Result_Mutual_Information = codecs.open("/Users/negin/Desktop/Result_Mutual_Information.csv", "wb", "utf-8")
+    Result_Mutual_Information = codecs.open("./Results/Result_Mutual_Information.csv", "wb", "utf-8")
     Result_Mutual_Information.write(column_title)
     for w in range(0, 100):
         line = str(score_mutual_information[w][0])
@@ -197,7 +197,7 @@ if __name__ == '__main__':
     print("Writing Result_Chi_Square.csv")
     score_chi_square = list(zip(words, score_chi_square))
     score_chi_square = sorted(score_chi_square, key=lambda l3: l3[1], reverse=True)
-    Result_Chi_Square = codecs.open("/Users/negin/Desktop/Result_Chi_Square.csv", "wb", "utf-8")
+    Result_Chi_Square = codecs.open("./Results/Result_Chi_Square.csv", "wb", "utf-8")
     Result_Chi_Square.write(column_title)
     for w in range(0, 100):
         line = str(score_chi_square[w][0])

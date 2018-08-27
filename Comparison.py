@@ -208,7 +208,7 @@ def chi_square_words():
 
 if __name__ == '__main__':
 
-    with open('/Users/negin/Downloads/SNLP/HW1/HAM2-corpus-short-with-tag-selected.txt', 'r') as fileCollection:
+    with open('./dataset/corpus.txt', 'r') as fileCollection:
         collection = fileCollection.read().split('\n')
         fileCollection.close()
     document_number = len(collection) - 1
