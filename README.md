@@ -1,17 +1,21 @@
 # FeatureExtraction
-Simple Implementation of Information Gain, Mutual Information and Chi-Square Algorithms for Feature Extraction.
+Implementation of Information Gain, Mutual Information and Chi-Square Algorithms.
 
 ## Introduction
+At first, we should extract documents categories. Next, we need some statistical analysis such as the number of documents containing a specific word. Then we can calculate the score of a word more easily. Finally, we can sort all scores and choose our features.
+
+Algorithms I implemented include:
  * Information Gain
  * Mutual Information
  * Chi-Square
- * Classify using SVM
+
+After Extracting Features we can use them to classify our documents. I use the normalized term frequency vector as a representation. In training step, I used SVM classifier with extracted vectors.
 
 A part of Hamshahri Corpus was used as dataset. I tried to extract 100 most important features from different news categories.
 
 ## Uses
- - Numpy (http://www.numpy.org/) version 1.14.5
- - Sklearn (http://scikit-learn.org/stable/)
+ - [Numpy] (http://www.numpy.org/) version 1.14.5
+ - [Sklearn] (http://scikit-learn.org/stable/)
 
 ## Run
  - `Algorithms.py` will extract features using `corpus.txt` from `dataset`
