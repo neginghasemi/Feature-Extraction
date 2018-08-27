@@ -11,7 +11,8 @@ Algorithms I implemented include:
 
 After Extracting Features we can use them to classify our documents. I use the normalized term frequency vector as a representation. In training step, I used SVM classifier with extracted vectors.
 
-A part of Hamshahri Corpus was used as dataset. I tried to extract 100 most important features from different news categories.
+## Data
+A part of Hamshahri Corpus was used as dataset. I extracted 100 most important features.
 
 ## Uses
  - [Numpy] (http://www.numpy.org/) version 1.14.5
