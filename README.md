@@ -15,8 +15,8 @@ After Extracting Features we can use them to classify our documents. I use the n
 A part of Hamshahri Corpus was used as dataset. I extracted 100 most important features.
 
 ## Uses
- - [Numpy] (http://www.numpy.org/) version 1.14.5
- - [Sklearn] (http://scikit-learn.org/stable/)
+ - [Numpy](http://www.numpy.org/) version 1.14.5
+ - [Sklearn](http://scikit-learn.org/stable/)
 
 ## Run
  - `Algorithms.py` will extract features using `corpus.txt` from `dataset`
